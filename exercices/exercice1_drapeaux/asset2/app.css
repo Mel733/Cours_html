@@ -1,0 +1,145 @@
+
+#ligne-haut{
+    display: flex; /*met les div enfant en ligne*/
+    justify-content: space-between; /*met de l'espace entre eux horizontalement*/
+}
+
+#thailande{ /*id pour drapeau thailande*/
+    width: 250px;
+    height:150px;
+    background: darkblue;
+    display: flex; /*va permttre de ranger les div enfants*/
+    flex-direction: column; /*les div enfants sont les un sous les autres verticalement*/
+    justify-content: space-between; /*on rajoute de l'espace en eux */
+    box-shadow: 0px 7px 10px black; /* rajoute un effet d'ombre: décalage horizontale, decalage berticale, niveau de flou, couleur*/
+}
+
+.th-drapeaux-rouge{ /*class pour partie rouge du drapeau*/
+    background: red;
+    width: 250px;
+    height: 25px;
+   
+}
+
+.th-drapeaux-blanc{
+    background: white;
+    width: 250px;
+    height: 25px;
+}
+
+
+#suisse{
+    width: 250px;
+    height: 150px;
+    background: red;
+    display: grid; /*le div devient un tableau. Chaque enfant va dans une case. */
+    place-items: center; /*centre les enfant div verticalement et horizontalement au centre de leur case, le place items marche avec le grid*/
+    box-shadow: 0px 7px 10px black; 
+    
+  
+}
+
+.su-horizontale{
+    background: white;
+    width: 100px;
+    height:30px ;
+    grid-area: 1/1; /*l’élément va dans la case ligne 1, colonne 1, elle se superpose avec la verticale */
+   
+   
+}
+
+.su-verticale{
+    background: white;
+    width: 30px;
+    height:100px ;
+    grid-area: 1/1;
+    
+}
+
+#ligne-centre{
+    display: flex;
+    justify-content: center; /*place le div enfant au centre, l'horizontale*/
+    margin-top: 40px; /*ajoute une marge exterieur au dessus du drapeau pour de l'espace*/
+}
+ 
+
+#england{
+    width: 300px;
+    height:160px;
+    display: grid;
+    place-items: center; /*centre les div enfant verticalemnt et horizontalemet*/
+    background: white;
+    box-shadow: 0px 7px 10px black;
+}
+
+
+.en-horizontale{
+    width: 300px;
+    height: 30px;
+    background: red;
+    grid-area: 1/1;
+}
+
+
+
+.en-verticale{
+    width: 30px;
+    height: 160px;
+    background: red;
+    grid-area: 1/1;
+
+}
+
+
+
+#hongrie{
+    width: 250px;
+    height:150px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 7px 10px black;
+}
+
+.hon-haut{
+    width: 250px;
+    height : 50px;
+    background: green;
+}
+
+.hon-bas{
+    width: 250px;
+    height : 50px;
+    background: red;
+}
+
+
+
+#ligne-bas{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#botswana{
+   width: 250px;
+   height:150px;
+   background: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   box-shadow: 0px 7px 10px black;
+}
+
+.bo-bleu{
+    width:250px ;
+    height: 50px;
+    background: rgb(22, 201, 255); 
+}
+
+.bo-blanc{
+    width: 250px;
+    height: 7px;
+    background: white;
+}

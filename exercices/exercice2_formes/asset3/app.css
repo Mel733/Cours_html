@@ -1,0 +1,83 @@
+#premiere-ligne{ /*div id pour la premiere ligne*/
+    border : 3px solid black;
+    display : flex; /*met les div enfant en ligne*/
+    
+}
+
+.case{
+    height: 150px;
+    border : 1px solid black;
+    display: flex;  /*met les div en ligne*/
+    justify-content: center; /*place le div enfant au centre, l'horizontale*/
+    align-items: center; /*align items pour le display flex, il centre les div enfants a la verticale*/
+    flex : 1;  /*les cases on les mêmes proportions de largeur*/
+}
+
+.carre{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    border: 3px solid black
+}
+
+.rectangle {
+    width: 50px;
+    height:120px;
+    background: yellow;
+    border: 3px solid black
+}
+
+
+.cercle{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%; /*arrondi les angles pour donné un cercle*/
+    border: 3px solid black
+}
+
+.carre-penche{
+    width: 100px;
+    height: 100px;
+    background: black;
+    transform: rotate(45deg); /* fait une rotation de 45 degres*/
+}
+
+
+.triangle{
+    display: grid; /*le div devient un tableau. Chaque enfant va dans une case. */
+    
+}
+
+.rectangle1{
+    width: 70px;
+    height:110px;
+    background: black; 
+    grid-area: 1/1; /* les éléments enfant de triangle sont les un sur les autres, Ligne1 et colonne1*/
+}
+
+.rectangle2{
+  width: 35px;
+  height:130px;
+  background: white;
+  grid-area: 1/1;
+  transform: translateX(-17px) translateY(-8px) rotate(17deg); /*déplace le rectangle sur la gauche(X), sur la hauteur(Y) et fait une rotation*/
+
+}
+
+.rectangle3{
+  width: 35px;
+  height:130px;
+  background: white;
+  grid-area: 1/1;
+  transform: translateX(55px) translateY(-8px) rotate(-17deg); /*déplace le rectangle sur la gauche(X), sur la hauteur(Y) et fait une rotation*/
+   
+}
+
+
+
+#seconde-ligne{
+    border : 3px solid black;
+    display : flex;
+    margin-top: 10px; /*espace entre la premiere ligne et la seconde*/
+}
