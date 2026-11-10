@@ -1,0 +1,14 @@
+#corps{
+    width:150px;
+    height : 400px;
+    border: 2px solid black;
+}
+
+#corps th, #corps td{
+    border: 2px solid black;
+    
+}
+
+#corps thead{
+    margin: auto;
+}

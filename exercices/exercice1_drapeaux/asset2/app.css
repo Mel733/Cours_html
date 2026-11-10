@@ -143,3 +143,65 @@
     height: 7px;
     background: white;
 }
+
+
+
+
+
+#thailande1 {
+    width: 250px;
+    height : 100px;
+    box-shadow: 5px 5px 20px black;
+    background: darkblue;
+    border-top: 25px solid red;
+    border-bottom: 25px solid red;
+    position: relative; /*met le body(le parents) comme zone de déplaceme,pour  les after et before*/
+    margin-top: 150px;
+
+}
+
+#thailande1::before, #thailande1::after{
+   
+    content:""; /*sans le content rien ne s'affiche*/
+    background: white;
+    height : 25px;
+    width: inherit; /*hérite de la taille du parent*/
+    position: absolute; /*ces éléments sont libre de déplacement dans le #thailande1*/
+}
+
+
+#thailande1 ::before{
+    top:0 /*positionnement en haut, utilsé grace au posistion absolute*/
+}
+
+#thailande1::after{
+    bottom : 0; /*positionnement en bas*/
+}
+
+#botswana1{
+    width: 250px;
+    height:50px;
+    background: black;
+    border-top: 55px solid rgb(22, 201, 255);
+    border-bottom: 55px solid rgb(22, 201, 255);
+    position: relative;
+    margin-top: 50px;
+    box-shadow: 5px 5px 20px black ;
+}
+
+
+#botswana1::before, #botswana1::after{
+    content: "";
+    background: white;
+    height : 10px;
+    width: inherit;
+    position: absolute;
+}
+
+#botswana1::before{
+    top:0
+}
+
+#botswana1::after{
+    bottom : 0
+}

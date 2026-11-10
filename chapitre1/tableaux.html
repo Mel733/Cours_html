@@ -25,8 +25,75 @@
         </nav>
     </header>    
      <main>
-         <h2>Tableaux</h2>
-        
+         <h2>Tableaux normaux</h2>
+        <table id="tableau-normal"> <!-- pour les tableaux -->
+            <tr> <!-- tableaux reader sa affiche une ligne -->
+                <th>ID</th> <!-- tableaux header, donne les noms des collonne -->
+                <th>Etudiants</th>
+                <th>Notes</th>
+                <th>Commentaires</th>
+            </tr>
+            <tr>
+                <td>1</td> <!-- tableaux data -->
+                <td>Thomas</td>
+                <td>17</td>
+                <td>Bien joué</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mark</td>
+                <td>15</td>
+                <td>Peux mieux faire</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Melvin</td>
+                <td>12</td>
+                <td>Pas mal</td>
+            </tr>
+        </table>
+<hr> <!--horizontale rpw, affiche une ligne entre les deux tableaux-->
+<h2>Tableau HTML 5</h2>
+<table id="tableaux-html5">
+    <caption>Liste de course de Mélodie</caption> <!--légende du tableaux-->
+    <thead> <!--ent tête, table head -->
+        <tr>
+            <th scope="col">N°</th> <!--précise que c'est une colonne au naviguateur-->
+            <th scope="col">Achats</th>
+            <th scope ="col">Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th> <!--précise que c'est une ligne, le premier élément est un th pour une ligne, elle n'a pas de vrai valeur-->
+            <td>Riz</td>
+            <td>1 euro 50</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Steack</td>
+            <td>5 euro 50</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Pack d'eau</td>
+            <td>4 euro</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Pain</td>
+            <td>1 euro 50</td>
+        </tr>
+    </tbody>
+    <tfoot> <!--Le footer, table foot-->
+        <tr>
+            <th scope="row" colspan="2">prix</th>
+            <td>12 euro 50</td>
+        </tr>
+    </tfoot>
+</table>
+
+
       </main>
 
     

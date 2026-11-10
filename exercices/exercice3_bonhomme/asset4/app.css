@@ -1,0 +1,109 @@
+#personnage{
+    width: 500px;
+    height: 560px;
+    position: relative;
+    background: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#visage{
+    height:350px;
+    width: 350px;
+    border-radius: 50%;
+    background: bisque;
+    position: relative;
+    z-index: 3;
+    
+}
+
+#chapeau{
+   width: 400px;
+   height: 80px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   z-index: 5;
+
+}
+
+#haut-chapeau{
+    width: 200px;
+    height : 70px;
+    background: black;
+}
+
+#bas-chapeau{
+    position: absolute;
+    width: 250px;
+    height : 10px;
+    background: black;
+    bottom :-10px;
+    right : -22px;
+}
+
+
+#yeux{
+    position: absolute;
+    top : 40px;
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+
+}
+
+.yeux1{
+    
+right : 70px
+}
+
+
+.yeux2{
+    left: 70px
+}
+
+#nez{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style : solid;
+    border-width: 0 30px 80px 30px;
+    border-color: transparent transparent burlywood transparent;
+    top : 50%;
+    margin-top: -40px;
+    left: 50%;
+    margin-left :15px;
+
+}
+
+#bouche{
+    width: 150px;
+    height : 50px;
+    border-radius: 30%;
+    background: black;
+    position: absolute;
+    bottom: 40px;
+    margin-left: -75px;
+}
+
+
+
+.oreilles{
+    background: bisque;
+    height: 150px;
+    width: 40px;
+    position: absolute;
+    border-radius: 40%;
+    top:90px;
+    z-index: 0 ;
+}
+
+#oreille-gauche{
+    left:0
+}
+
+#oreille-droite{
+    right :-10px;
+}
