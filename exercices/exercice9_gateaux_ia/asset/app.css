@@ -1,0 +1,242 @@
+/* ========== PAGE ========== */
+/* On centre la scène au milieu de l'écran */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fbd6e3;
+}
+
+/* ========== SCÈNE ========== */
+/* Fond rose avec un halo plus clair au centre.
+   position: relative → les éléments à l'intérieur se placent par rapport à elle */
+.scene {
+  position: relative;
+  width: 480px;
+  height: 560px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #ffe9f1, #fbc9db 80%);
+}
+
+/* ========== TITRE ========== */
+/* Texte du haut, avec contour blanc (text-shadow) */
+.titre {
+  position: absolute;
+  top: 58px;
+  width: 100%;
+  text-align: center;
+  font: 32px 'Pacifico', cursive;
+  color: #d6336c;
+  text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 0 3px 6px rgba(214, 51, 108, .3);
+  animation: titre 2.4s ease-in-out infinite;  /* on lance l'animation */
+}
+
+/* Animation : le texte monte, descend et tourne un peu */
+@keyframes titre {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-6px) rotate(2deg); }
+}
+
+/* ========== ASSIETTE ========== */
+.assiette {
+  position: absolute;
+  left: 50px;
+  top: 470px;
+  width: 380px;
+  height: 42px;
+  border-radius: 50%;              /* 50% = ovale */
+  background: #f4f1f3;
+  box-shadow: 0 8px 14px rgba(190, 80, 120, .25);
+}
+
+/* ========== ÉTAGES ========== */
+/* Règle commune aux 3 étages */
+.etage {
+  position: absolute;
+}
+
+/* Puis la taille, la place et la couleur de chaque étage */
+.bas {
+  left: 90px;  top: 368px;
+  width: 300px; height: 119px;
+  border-radius: 14px;
+  background: #8b4a2b;
+}
+.milieu {
+  left: 125px; top: 275px;
+  width: 230px; height: 93px;
+  border-radius: 14px;
+  background: #f4a6c4;
+}
+.haut {
+  left: 160px; top: 207px;
+  width: 160px; height: 68px;
+  border-radius: 12px;
+  background: #fff3c4;
+}
+
+/* ========== GLAÇAGE ========== */
+/* Bande rose en haut de chaque étage */
+.glacage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 24px;
+  border-radius: 14px 14px 6px 6px;
+  background: #f86fa0;
+}
+
+/* Version blanche (étage du milieu) */
+.blanc {
+  background: #fff;
+}
+
+/* Gouttes : des ronds qui dépassent sous le glaçage */
+.glacage i {
+  position: absolute;
+  top: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: inherit;             /* même couleur que le glaçage */
+}
+
+/* Position de chaque goutte (distance depuis la gauche) */
+.bas .g1 { left: 10px; }
+.bas .g2 { left: 60px; }
+.bas .g3 { left: 120px; }
+.bas .g4 { left: 190px; }
+.bas .g5 { left: 250px; }
+
+.milieu .g1 { left: 15px; }
+.milieu .g2 { left: 75px; }
+.milieu .g3 { left: 140px; }
+.milieu .g4 { left: 195px; }
+
+.haut .g1 { left: 8px; }
+.haut .g2 { left: 55px; }
+.haut .g3 { left: 100px; }
+.haut .g4 { left: 132px; }
+
+/* ========== PETITS POINTS ========== */
+/* Une rangée de points : un seul rond dessiné, puis répété.
+   space = on répète seulement des ronds entiers et on répartit l'espace  */
+.points {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  background: radial-gradient(circle, var(--c) 3.5px, transparent 4.5px) 0 0 / var(--p) 8px space;
+}
+
+/* --c = couleur des points, --p = espace entre les points */
+.points-bas    { top: 101px; --c: #ffe08a; --p: 20px; }
+.points-milieu { top: 76px;  --c: #d6336c; --p: 18px; }
+.points-haut   { top: 52px;  --c: #f9a8c9; --p: 19px; }
+
+/* ========== CŒURS ========== */
+/* flex → les 4 cœurs sont espacés régulièrement */
+.coeurs {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 22px;
+  box-sizing: border-box;
+  color: #d6336c;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* ========== PRÉNOM ========== */
+/* Texte blanc avec contour rose, un peu incliné (pas d'animation) */
+.prenom {
+  position: absolute;
+  left: 0;
+  top: 36px;
+  width: 100%;
+  text-align: center;
+  font: 38px 'Pacifico', cursive;
+  color: #fff;
+  text-shadow: 0 0 3px #d6336c, 0 0 3px #d6336c, 2px 3px 4px rgba(80, 20, 40, .5);
+  transform: rotate(-4deg);
+}
+
+/* ========== BOUGIES ========== */
+/* Base commune : rayures en diagonale (la bougie ne bouge pas) */
+.bougie {
+  position: absolute;
+  width: 14px;
+  border-radius: 4px 4px 0 0;
+  background: repeating-linear-gradient(135deg, var(--a) 0 5px, #fff 5px 10px);
+}
+
+/* Position, hauteur et couleur de chaque bougie (--a = couleur des rayures) */
+.bleue { left: 193px; top: 158px; height: 50px; --a: #4dabf7; }
+.rose  { left: 233px; top: 148px; height: 60px; --a: #f06595; }
+.verte { left: 273px; top: 160px; height: 48px; --a: #51cf66; }
+
+/* Mèche (::before = élément ajouté avant le contenu) */
+.bougie::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -9px;
+  width: 2px;
+  height: 9px;
+  background: #444;
+}
+
+/* Flamme (::after = élément ajouté après le contenu) */
+.bougie::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -38px;
+  width: 12px;
+  height: 26px;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;   /* forme de goutte */
+  background: radial-gradient(circle at 50% 75%, #fff6b0 20%, #ffb703 60%, #ff7b00);
+  box-shadow: 0 0 14px 6px rgba(255, 200, 60, .55);   /* lueur autour */
+  transform-origin: bottom;
+  animation: flamme .5s ease-in-out infinite alternate;
+}
+
+/* Animation : la flamme bouge légèrement (taille et angle changent un peu) */
+@keyframes flamme {
+  from { transform: scale(1, 1) rotate(-2deg); }
+  to   { transform: scale(.94, 1.06) rotate(2deg); }
+}
+
+/* ========== CONFETTIS ========== */
+/* Base commune : petit rectangle qui tombe du haut vers le bas, en boucle.
+   top: -20px → ils partent juste au-dessus de la scène */
+.confetti {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 9px;
+  border-radius: 2px;
+  animation: chute var(--d) linear infinite;
+}
+
+/* Animation : le confetti tombe de 600px en tournant sur lui-même */
+@keyframes chute {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(600px) rotate(360deg); }
+}
+
+/* Place (left), couleur, vitesse (--d) et décalage de départ (animation-delay négatif)
+   Le décalage évite que tous les confettis tombent en même temps */
+.c1 { left: 34px;  background: #4dabf7; --d: 6s;   animation-delay: -1s; }
+.c2 { left: 136px; background: #51cf66; --d: 7s;   animation-delay: -4s; }
+.c3 { left: 236px; background: #ff922b; --d: 6.5s; animation-delay: -2s; }
+.c4 { left: 341px; background: #4dabf7; --d: 7.5s; animation-delay: -5s; }
+.c5 { left: 389px; background: #ffd43b; --d: 6s;   animation-delay: -3s; }
+.c6 { left: 86px;  background: #ffd43b; --d: 8s;   animation-delay: -6s; }
+.c7 { left: 12px;  background: #ff922b; --d: 7s;   animation-delay: -2.5s; }
+.c8 { left: 440px; background: #51cf66; --d: 6.5s; animation-delay: -4.5s; }

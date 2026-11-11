@@ -1,0 +1,32 @@
+#balle{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    position: relative; /* la balle reste à sa place et devient la référence pour ses enfants */
+    border-radius: 50%;
+    box-shadow: 3px 7px 10px black; /* ombre: décalage horizontal, décalage vertical, flou, couleur */
+    margin-left: 25%; /* pousse l'élément vers la droite*/
+    margin-top: 10%; /* pousse l'élément vers le bas */
+    display: flex; /* met les div enfants en ligne */
+    justify-content: center; /* centre les éléments enfants */
+}
+
+#etoile{
+    position: absolute; /* l'élément se place par rapport à son parent, donc la balle */
+    color: red;
+    font-size: xx-large; /* change la taille de l'étoile */
+    margin-top: 40%; /* pousse l'élément vers le bas pour centrer l'étoile */
+}
+
+#balle::before{
+    content: ""; /* obligatoire pour afficher */
+    position: absolute; /* l'élément se place par rapport à son parent, donc la balle */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: white;
+    filter: blur(17px); /* floute le cercle */
+    border: 2px solid black;
+    left: 15px; /* se positionne à 15px depuis la gauche */
+    top: 20px; /* se positionne à 20px depuis le haut */
+}

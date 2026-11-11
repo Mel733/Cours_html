@@ -1,0 +1,25 @@
+#grille{
+    width:400px;
+    height : 400px;
+    background: rgb(22, 112, 202);
+
+}
+
+
+
+.p{ /*p pour la peau*/
+    background: rgb(243, 169, 78);
+}
+
+
+.r{ /*r pour rouge claire*/
+    background: red;
+}
+
+.b{ /*b pour bordeaux*/
+    background: rgb(117, 3, 3);
+}
+
+.bouttons{
+    background: rgb(255, 255, 2);
+}
