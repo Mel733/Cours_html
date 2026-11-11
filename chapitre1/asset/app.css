@@ -134,7 +134,7 @@ div:not(.petit-carre){/*toutes les div sauf class petit carre*/
 /*Page tableau*/
 #tableau-normal{
     width: 100%; /*prend 100% de la largeur*/
-    border-collapse: collapse; /*rejoin l'espace précédent des bordure*/
+    border-collapse: collapse; /*rejoin les espaces entre les bordures*/
 
 }
 

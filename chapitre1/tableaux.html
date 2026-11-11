@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
-    <!-- #titre onglet er resultat dans serp -->
+    <!-- #titre de l'onglet et du résultat dans la serp -->
     <meta name="Description" content="Découverte html css"> 
     <!-- #description d'un site web dans la serp -->
     <link rel="stylesheet" href="asset/app.css">
@@ -14,7 +14,7 @@
     <header>
         <h1>Chapitre sur les Tableaux</h1>
         <nav>
-            <!-- <ul> # est l'endroit où on se trouve -->
+            <!-- <ul> # liste non ordonnée, pour mettre les liens du menu -->
                 <a href = "index.html">Accueil</a>
                 <a href = "formulaire.html">Formulaire</a>
                 <a href = "images.html.">Images</a>
@@ -27,14 +27,14 @@
      <main>
          <h2>Tableaux normaux</h2>
         <table id="tableau-normal"> <!-- pour les tableaux -->
-            <tr> <!-- tableaux reader sa affiche une ligne -->
-                <th>ID</th> <!-- tableaux header, donne les noms des collonne -->
+            <tr> <!-- table row, ça affiche une ligne -->
+                <th>ID</th> <!-- table header, donne les noms des colonnes -->
                 <th>Etudiants</th>
                 <th>Notes</th>
                 <th>Commentaires</th>
             </tr>
             <tr>
-                <td>1</td> <!-- tableaux data -->
+                <td>1</td> <!-- table data, avec des données -->
                 <td>Thomas</td>
                 <td>17</td>
                 <td>Bien joué</td>
@@ -52,20 +52,20 @@
                 <td>Pas mal</td>
             </tr>
         </table>
-<hr> <!--horizontale rpw, affiche une ligne entre les deux tableaux-->
+<hr> <!--horizontal rule, affiche une ligne entre les deux tableaux-->
 <h2>Tableau HTML 5</h2>
 <table id="tableaux-html5">
-    <caption>Liste de course de Mélodie</caption> <!--légende du tableaux-->
-    <thead> <!--ent tête, table head -->
+    <caption>Liste de course de Mélodie</caption> <!--légende du tableau-->
+    <thead> <!--en-tête, table head -->
         <tr>
-            <th scope="col">N°</th> <!--précise que c'est une colonne au naviguateur-->
+            <th scope="col">N°</th> <!--précise au navigateur que c'est l'en-tête d'une colonne-->
             <th scope="col">Achats</th>
             <th scope ="col">Prix</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row">1</th> <!--précise que c'est une ligne, le premier élément est un th pour une ligne, elle n'a pas de vrai valeur-->
+            <th scope="row">1</th> <!--précise que c'est l'en-tête d'une ligne, c'est un th et pas un td, ce n'est pas une donnée-->
             <td>Riz</td>
             <td>1 euro 50</td>
         </tr>
@@ -85,7 +85,7 @@
             <td>1 euro 50</td>
         </tr>
     </tbody>
-    <tfoot> <!--Le footer, table foot-->
+    <tfoot> <!--Le pied du tableau, table foot-->
         <tr>
             <th scope="row" colspan="2">prix</th>
             <td>12 euro 50</td>

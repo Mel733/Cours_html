@@ -1,0 +1,68 @@
+
+#corps{
+    width: 120px;
+    height: 250px;
+    background: burlywood;
+    display: flex; 
+    flex-direction: column; /*mettera les div enfant en colonnes*/
+    align-items: center; /*les centre*/
+    border-radius: 50% 50% 0 0; /*haut-gauche haut-droit bas-droit bas-gauche
+    /*pour arrondir le haut du rectangle*/
+    margin-left: 50%; /*pour centrer sur la page*/
+    margin-top: 70px;
+    position: relative; /*l’élément(le corps) reste à sa place et devient la référence pour ses enfants*/
+}
+
+
+
+#visage{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(7, 189, 7);
+    position: relative; /*l’élément(le visag) reste à sa place et devient la référence pour ses enfants*/
+    top:-10px; /*le positionner un peut en dehor du corps*/
+    opacity: 0.8; /*le niveau d'opicté, pour voir a travers*/
+}
+
+
+.oreilles{
+    position: absolute; /*l'élément se place par rapport a son parents donc le visage*/
+    border-style : solid; /*sans cela les triangles n'apparaissent pas*/
+    border-width: 0 20px 70px 20px; /*les largeur du triangles, l'ordre est haut, droite, bas, gauche*/
+    border-color: transparent transparent rgb(20, 211, 52) transparent; /*ordre identique, seule la bordure du bas est verte*/
+    opacity: 0.8;
+  
+}
+
+#oreille-gauche{
+    left:-30px; /*les emplacements en partant du visage*/
+    rotate: -65deg; /*une rotation pour les placer selon la reference*/
+}
+
+#oreille-droite{
+    right:-30px;
+    rotate: 65deg;
+}
+
+
+.mains{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(20, 211, 52) ;
+    position: absolute; /*l'élément se place par rapport a son parents donc le corps*/
+    opacity: 0.8;
+
+}
+
+#main-gauche{ /*leurs emplacemnts en partant du corps*/
+bottom: 40%;
+left :-20px;
+}
+
+
+#main-droite{
+   bottom: 40%;
+   right: -20px;
+}

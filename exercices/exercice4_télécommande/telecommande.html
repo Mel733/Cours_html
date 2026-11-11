@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>bonhomme</title>
+    <title>Télécommande</title>
      <link rel="stylesheet" href="asset/app.css">
 </head>
 
@@ -10,15 +10,15 @@
 
 <thead>
     <tr>
-    <th colspan="6">Télécommande</th>
+    <th colspan="6">Télécommande</th> <!--fusionne 6 colonnes, sur toute la largeur du tableau-->
     </tr>
 </thead>
 
 <tbody>
     <tr>
-        <td>A</td>
-        <td colspan="4"> &emsp;</td>
-        <td>E</td>
+        <td >A</td>
+        <td colspan="4"></td> <!--fusionne 4 colonnes sur la largeur, les deux autres sont pour le A et E-->
+        <td >E</td>
     </tr>
 
     <tr>
@@ -48,17 +48,20 @@
     </tr>
 
     <tr>
-        <td rowspan="3">&laquo;</td>
-        <td rowspan="2"> &raquo;</td>
+        <td rowspan="2" colspan="2">&laquo;</td>  <!--rowspan="2" : sur 2 lignes (hauteur), colspan="2" : sur 2 colonnes (largeur)-->
+        <td rowspan="2" colspan="2"> &raquo;</td> <!--code pour guillmets << et >>-->
         <td>Av</td>
         <td>Enreg</td>
+       
+    </tr>
+    <tr>
         <td>Play</td>
         <td>Stop</td>
     </tr>
 </tbody>
 <tfoot>
     <tr>
-        <th colspan="6">Fin de télécommande</th>
+        <th colspan="6">Fin de télécommande</th> <!--fusionne 6 colonnes, sur toute la largeur du tableau-->
     </tr>
 </tfoot>
 

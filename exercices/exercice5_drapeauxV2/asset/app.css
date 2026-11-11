@@ -1,0 +1,149 @@
+.premiere-ligne{
+   display: flex; /*ranger ces div enfant sur l'axe verticale*/
+   gap : 10px
+}
+.seconde-ligne{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.troisieme-ligne{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+#allemagne{
+    width: 250px;
+    height: 150px;
+    border: 2px solid black;
+    background: red;
+    position: relative; /*l’élément(le drapeau) reste à sa place et devient la référence pour ses enfants*/
+}
+
+#allemagne::before{   /*placé avant le contenue de l'élément*/
+    content: ""; /*sans le content la partie n'apparait pas*/
+    background: black;
+    height: 50px;
+    width: inherit;
+    top: 0;
+    position: absolute; /*l’élément se place par rapport au parent*/
+}
+
+#allemagne::after{ /*placé après le contenue de l'élément*/
+    content: "";
+    background: yellow;
+    height: 50px;
+    width: inherit;
+    bottom: 0;
+    position: absolute;
+}
+
+
+#france{
+    width: 250px;
+    height: 150px;
+    border: 2px solid black;
+    position: relative;
+    background: white; 
+}
+
+#france::before{
+    content: "";
+    background: blue;
+    height:inherit;
+    width: 75px;
+    position: absolute;
+    left:0;
+}
+
+#france::after{
+    content: "";
+    background: red;
+    height: inherit;
+    width: 75px;
+    position: absolute;
+    right:0;
+}
+
+#japon{
+    width: 250px;
+    height: 150px;
+    border:2px solid black;
+    position: relative;
+    background: white;
+   
+}
+
+#japon::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    right:95px; /*calcule "largeur parent - largeur cercle"*/
+    bottom: 45px; /*calcule "longueur parent - longueur cercle"*/
+}
+
+
+#lettonie{
+   width: 250px;
+   height: 150px;
+   position: relative; 
+   border: 2px solid black;
+   background: white;
+}
+
+#lettonie::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 60px;
+    background: rgb(133, 14, 14);
+    top:0;
+}
+
+#lettonie::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 60px;
+    background: rgb(133, 14, 14);
+    bottom:0;
+}
+
+#malte{
+    width: 250px;
+    height: 150px;
+    position: relative;
+    border: 2px solid black;
+    background: white;
+}
+
+#malte::before{
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: 125px;
+    background: red;
+    right:0
+}
+
+
+
+#ukraine{
+    width: 250px;
+    height: 150px;
+    position: relative;
+    border: 2px solid black;
+    background: rgb(36, 114, 223);
+}
+
+#ukraine::before{
+    content: "";
+    background: yellow;
+    width: inherit;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+}
