@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="asset/app.css">
     <!-- # relie l'index html avec le css    -->
 </head>
-<body id ="body-formulaire">
+<body >
     <header>
         <h1>Chapitre sur les formulaires</h1>
         <nav>
@@ -26,11 +26,63 @@
     </header>    
      <main>
          <h2>Formulaire</h2>
-        
+           <form>
+             <fieldset>
+                <legend>Rmeplissez le formulaire</legend>
+             
+                <label for="prenom">Votre prénom</label> <!--doit renseigner un for pour l'id en dessous-->
+                <input type="texte" placeholder="Indiquez votre prénom" id="prenom"> <!--Quand j'appuie sur le label, le curseur (focus) va sur le champs-->
+                
+                <label for="nom">Votre nom</label>
+                <input type="texte" placeholder="Indiquez votre nom" id="nom" maxlength="20" minlength="2" maxlength="30" minlength="1">
+
+                <label for="age">Votre age</label>
+                <input type="number" placeholder="Indiquez votre age" id="age" min="10" max="120" value="21" >
+
+                <label for="mdp">Votre mot de passe</label>
+                <input type="password" placeholder="Indiquez votre mot de passe" id="mdp">
+                
+                <p>La liste de course<p>
+                <div>
+                 <input type="checkbox" id="riz"><label for="riz">Riz</label>
+                 <input type="checkbox" id="steack"><label for="steack">Steack</label>
+                 <input type="checkbox" id="eau"><label for="eau">Eau</label>
+                </div>
+
+                <p>Indiquer votre civilité<p>
+                <div>
+                 <input type="radio" id="mme" checked name="civilite"><label for="mme">Madame</label>
+                 <input type="radio" id="mr" checked name="civilite"><label for="mr">Monsieur</label>
+                </div>
+                
+                
+                <label for="annee">Votre année de naissance</label>
+                <select id="annee">
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                </select>
+                
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Placer votre message"></textarea>
+
+
+                <div id="buttons">
+                 <input type="button" value="Clique ici">
+                 <input type="reset" value="effacer">
+                </div>
+                 <input type="submit" value="Envoyez les données" >
+                
+                </fieldset>
+            </form>       
+
+            
+
+
+
+
+
       </main>
-
-    
-
     <footer>
         <h6>Ceci est un footer informatif</h6>
         <p>Footer sert à présenter des informations de bas de page , comme des contact ou mentions légales</p>

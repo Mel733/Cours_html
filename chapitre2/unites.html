@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les unités</title>
+    <link rel="stylesheet" href="asset/app.css">
+</head>
+<body>
+    <h1>Les unité en CSS</h1>
+    <!--Les unitées dites absolue(px, cm, mm, in, pt, pc): elles représentent des mesure fixes
+    et ne dépendent pas de la taille de l'élément parent ou de la fenetre
+    
+    Les unitées dites relatives(em, rem, %, vw, vh): elles dépendent de la taille de l'élément parent, 
+    de la taille de la police ou de la taille de la fenêtre-->
+
+    
+    <div class="box-px">Boite en pixels</div>
+
+    <!--emphasis-->
+    <div class="parent-em">
+        <div class="box-em">Boite en em</div>
+    </div>
+
+
+    <!--root emphasis(rélatif a l'élement racine)-->
+    <div class="box-rem">Boite en rem</div>
+
+    <div class="parent-pourcent">
+      <div class="box-pourcent">Boite en pourcent</div>
+    </div>
+     
+    <!--vh (viewport height) & vw(viewport widht) : relatif à la hauteur et à la largeur de la fenetre-->
+     <div class="box-vh-vw">Boite vh et vw</div>
+
+    <!--a voir : svh, lvh, dvh-->
+</body>
+</html>

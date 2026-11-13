@@ -35,8 +35,8 @@ body {
 
 /* Animation : le texte monte, descend et tourne un peu */
 @keyframes titre {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50%      { transform: translateY(-6px) rotate(2deg); }
+  0%, 100% { transform: translateY(-4px) rotate(0); }
+  50%      { transform: translateY(4px) rotate(0); }
 }
 
 /* ========== ASSIETTE ========== */

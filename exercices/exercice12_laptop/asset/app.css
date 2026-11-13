@@ -1,0 +1,57 @@
+#laptop{
+    display: flex;
+    flex-direction: column; /*dispose les div enfant en colonne*/
+    align-items: center; /*aligne les élément au centre a  l'horizontale*/
+    margin-top: 50px; /*déplace de 50 pixel depuis le haut */
+}
+
+#ecran{
+    background: black;
+    position: relative; /*l’élément reste à sa place et devient la référence pour ses enfants*/
+    width: 350px;
+    height: 200px;
+    border-radius: 5% 5% 0 0; /*haut-gauche, haut-droit, bas-droit, bas-gauche*/
+}
+
+#clavier{
+    background: grey ;
+    width: 400px;
+    height: 15px;
+    border-radius: 10% 10% 0 0;  /*haut-gauche, haut-droit, bas-droit, bas-gauche*/
+    position: relative; /*l’élément(le visag) reste à sa place et devient la référence pour ses enfants*/
+}
+
+#trait-blanc{
+    background: white;
+    width: 50px;
+    height: 5px;
+    position: absolute; /*l'élément se place par rapport a son parents donc le clavier*/
+    border-radius: 10% 10% 10% 10%;
+    right: 45%;
+    top:5px;
+   box-shadow: 2px 2px 5px black;
+}
+
+#bas-laptop{ /*pour faire un trapèze*/
+  border-top: 10px solid rgb(66, 64, 64); /*bordure du haut visible avec 15px d'épaisseur*/
+  border-left  : 15px solid transparent; /*bordure de gauche invisible avec 15px d'épaisseur*/
+  border-right : 15px solid transparent; /*pareil*/
+  width  : 370px; /*largeur de 370px*/
+  filter: drop-shadow(0 5px 5px black); /* le filtre applique un effet visuel sur le trapèze dans mon cas, il change l'apparence sans modifier le trapèze
+  j'ai utilisé le drop-shadow (qui est similaire au box-shadow pour les ombres), pour que l'ombre suive la forme de mon trapèze.
+  Box-shadow met une ombre autour de la boîte rectangulaire de mon trapèze, alors que drop-shadow suit la forme visible */
+
+}
+
+/* img{
+    position: absolute;
+    left:25px;
+    top:25px;
+   
+} */
+
+video{
+    position: absolute; /*l'élément se place par rapport a son parents donc l'écran*/
+    left:25px; /*déplace de 25px depuis la gauche du parent*/
+    top:25px; /*déplace de 25px depuis le haut du parent*/
+}

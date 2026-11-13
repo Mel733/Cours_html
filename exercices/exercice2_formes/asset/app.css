@@ -45,34 +45,15 @@
 
 
 .triangle{
-    display: grid; /*le div devient un tableau. Chaque enfant va dans une case. */
-    
+  display: grid; /*le div devient un tableau. Chaque enfant va dans une case. */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 100px 50px;
+  border-color: transparent transparent black transparent;
 }
 
-.rectangle1{
-    width: 70px;
-    height:110px;
-    background: black; 
-    grid-area: 1/1; /* les éléments enfant de triangle sont les un sur les autres, Ligne1 et colonne1*/
-}
 
-.rectangle2{
-  width: 35px;
-  height:130px;
-  background: white;
-  grid-area: 1/1;
-  transform: translateX(-17px) translateY(-8px) rotate(17deg); /*déplace le rectangle sur la gauche(X), sur la hauteur(Y) et fait une rotation*/
-
-}
-
-.rectangle3{
-  width: 35px;
-  height:130px;
-  background: white;
-  grid-area: 1/1;
-  transform: translateX(55px) translateY(-8px) rotate(-17deg); /*déplace le rectangle sur la gauche(X), sur la hauteur(Y) et fait une rotation*/
-   
-}
 
 
 

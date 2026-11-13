@@ -1,0 +1,71 @@
+#batiment{
+    width: 400px;
+    height:600px;
+    display: flex; /*permet de mettre les div enfant en colonne*/
+    flex-direction: column; /*de facon en colonne, les uns sous les autres*/
+    align-items: center; /*tout en les alignant au centre*/
+}
+
+#toit{
+    display: flex; /*identique mais pour les enfant de toit*/
+    flex-direction: column;
+    align-items: center;
+}
+
+#haut-toit{
+    background: orangered;
+    width: 100px;
+    height:50px;
+}
+
+#centre-toit{
+    background: orangered;
+    width: 200px;
+    height: 50px;
+}
+
+#bas-toit{
+   background: orangered;
+   width: 300px;
+   height: 50px;
+}
+
+#corps-maison{
+    display: flex; /*identique mais pour les enfant de corps maison*/
+    flex-direction: column;
+    align-items: center;
+    background: blue;
+    width: 350px;
+    height: 400px;
+}
+
+
+#dernier-etage{
+    display: flex;
+    gap: 20px; /*ajoute un espace entre les fenetre de l'étage*/
+    margin-top: 20px; /* les decale de 20px depuis le haut du parent*/
+}
+
+#second-etage{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+#premier-etage{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fenetre{
+    width: 70px;
+    height: 70px;
+    background: red;
+
+}
+
+.porte{
+    background: red;
+    width: 70px;
+    height: 200px;
+}

@@ -1,0 +1,56 @@
+*, /*cible tout les éléments*/
+*::after,
+*::before{
+    box-sizing: border-box;
+    /*inclut les bordures et le padding dans la taille totale*/
+}
+
+ body{
+    margin:0 /*enlève les espace autour du body*/
+}
+
+.box-px{
+    width: 200px; /*valeur fixe*/
+    height: 100px;
+    background:rgb(93, 93, 173);
+}
+
+.parent-em{
+    font-size: 25px;/* taille de police de l'élément parent*/
+}
+
+.box-em{
+    background: rgb(87, 183, 87);
+    width: 10em;/*largeur relative a la taille de police de l'élément parent(10*16px(font size parent)*/
+    height: 5em; /*hauteur relative a la taille de police de l'élément parent(5*16px(font size parent)*/
+}
+
+html{
+    font-size: 17px; /*taille de la police de l'élément racine, changez la taille, change la taille de la box ci-dessous*/
+}
+
+.box-rem{
+    width: 10rem; /*largeur relative a la taille de police de l'élément racine(10*16px(font size racine html)*/
+    height: 5rem; /*hauteur relative a la taille de police de l'élément racine(5*16px(font size racine html)*/
+    background: rgb(216, 107, 107);
+}
+
+.parent-pourcent{
+    width: 400px;
+    height: 200px;
+    background: grey;
+}
+
+.box-pourcent{
+    width: 50%; /*largeur relative a la largeur de l'élément parent(50% de 400px)*/
+    height: 50%; /*hauteur relative a la hauteur de l'élément parent(50% de 200px)*/
+    background: plum;
+
+
+}
+
+.box-vh-vw{
+    width: 50vw; /*largeur relative a la largeur de la fenetre(50% de la largeur de la fentere)*/
+    height: 50vh; /*hauteur relative a la hauteur de la fenetre(50% de la hauteur de la fentere)*/
+    background: orange;
+}

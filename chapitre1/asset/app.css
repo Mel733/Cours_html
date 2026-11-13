@@ -131,6 +131,10 @@ div:not(.petit-carre){/*toutes les div sauf class petit carre*/
 
 }
 
+
+
+
+
 /*Page tableau*/
 #tableau-normal{
     width: 100%; /*prend 100% de la largeur*/
@@ -227,3 +231,66 @@ div:not(.petit-carre){/*toutes les div sauf class petit carre*/
 #tableaux-html5 tfoot th{
 text-align: right;
 }
+
+
+
+
+/*Page des formulaires*/
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+/*pseudo class: not() permet d'exclure des éléments correspondant aux selecteurs indiquée*/
+input:not([type="button"],[type="reset"], [type="sumit"]), select, textarea{
+    margin-block: 10px;/*margin top + margin bottom*/
+    padding: 5px;
+
+}
+
+fieldset{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+textarea{
+    resize: vertical; /*modifie la zone de texte verticalement*/
+    height: 100px;
+    font-family: inherit;/*pour police de caracteres*/
+    font-size: 12px;
+}
+
+
+#buttons{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+input[type="button"], input[type="reset"]{
+    width: calc(100%/2);
+    /*voir pour espacer les bouttons et la place qu'il occuper*/
+    
+}
+
+input[type="button"], input[type="reset"], input[type="submit"]{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="button"]{
+    background: blue;
+    color: white;
+}
+input[type="reset"]{
+    background: red;
+    color: white;
+}
+input[type="submit"]{
+    background: greenyellow;
+    color: black;
+}
+

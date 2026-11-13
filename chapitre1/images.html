@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Chapitres sur Images</h1>
+        <h1>Chapitres sur Images et éléments multimédia</h1>
         <nav>
             <!-- <ul> # est l'endroit où on se trouve -->
                 <a href = "index.html">Accueil</a>
@@ -25,8 +25,52 @@
         </nav>
     </header>    
      <main>
-         <h2>Images</h2>
+         <h2>Images et éléments multimédia</h2>
+         <!--
+         jpg -> jpeg : format d'image compressé utilisé pour les photos et image avec beucoup de couleur
+         
+         
+         
+         
+         
+         
+         src = source de l'image
+         alt = texte alternatif décrivant l'image
+         loading="lazy" pour charger l'image de manière paresseuse(au besoin)-->
+         <img src="asset/img/perroquet.jpg" alt="un perroquet gris du gabon" loading="lazy">
+         <!--Ajoute une image sur le site en renseignant sa source et un texte alternatif qui s'affiche lorsqu'il y a un problème d'affichage avec l'image-->
+         <img src="asset/img/perroquet.webp" alt="un perroquet arras rouge qui vole" loading="lazy">
+         <img src="asset/img/vague-kanagawa.png" alt="la vague de kanagawa" loading="lazy">
+
+         <object data="asset/img/vague-kanagawa.png" type="image/png" width="300" height="200">
+            <!--objet de l'image de vague, type image/png avec une largeur et une hauteur donné-->
+            <!--L'objet intégrer une ressource externe comme un pdf et j'en passe -->
+            Image alternative si l'objet ne peut etre affiché <!--contenue de secours sous forme de texte si l'image s'affiche pas-->
+         </object>
+
+        <hr>
+        <h2>Vidéos</h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yT6XOfy2gEE?si=ketAS5oDPkDi2IRG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <!--intégrer une vidéo youtube avec les largeur et hauteur de la video-->
+
+        <video width="560" height="315" autoplay muted loop controls> <!--intégrer une video mp4, autoplay lance automatiquement la vidéo, muted enleve le son,loop lance la vidéo en boucle et controls donne les controls a l'user-->
+             <source src="asset/mp4/Guide complet.mp4" type="video/mp4"> <!--identique mais pour un mp4-->
+             Votre navigateur ne support pas la lectures des vidé <!--texte de secours-->
+        </video>
+
+        <hr>
+        <h2>Audio</h2>
+        <audio controls> <!--permet a l'user d'avoir les controle sur l'audio-->
+             <source src="asset/mp3/musique.mp3" type="audio/mp3"> <!--importer l'audio dans la page avec sa source dans les asset, son type est audio/mp3-->
+             Votre naviagteur ne suporte pas la lesctures des fichiers audio  <!--texte de secours-->
+        </audio>
         
+        <hr>
+        <h2>Google Map</h2>
+        <!--Intergre une carte google map-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20997.839412022033!2d2.3712556999999994!3d48.8633602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1794504138292!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!--lien donné par google map pour afficher la map-->
       </main>
 
     
